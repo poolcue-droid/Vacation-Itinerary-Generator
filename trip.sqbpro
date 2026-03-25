@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="trip.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="935"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><table title="activities" custom_title="0" dock_id="1" table="4,10:mainactivities"/><dock_state state="000000ff00000000fd00000001000000020000043c000002b6fc0100000001fb000000160064006f0063006b00420072006f007700730065003101000000000000043c0000011e00ffffff000002580000000000000004000000040000000800000008fc00000000"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="activities" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_" freeze_columns="0"><sort/><column_widths><column index="1" value="29"/><column index="2" value="101"/><column index="3" value="71"/><column index="4" value="39"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1*">DROP TABLE IF EXISTS hotels;
+DROP TABLE IF EXISTS activities;
+
+CREATE TABLE hotels (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    price_per_night INTEGER NOT NULL
+);
+
+CREATE TABLE activities (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    destination TEXT NOT NULL,
+    cost INTEGER NOT NULL
+);</sql><sql name="SQL 2*">INSERT INTO hotels (name, destination, price_per_night) VALUES
+-- Kerala
+('Leela Kovalam', 'Kerala', 9000),
+('Backwater Stay', 'Kerala', 2500),
+('Green Palace', 'Kerala', 4000),
+('Palm Resort', 'Kerala', 3500),
+
+-- Delhi
+('Taj Palace', 'Delhi', 8000),
+('Bloomrooms', 'Delhi', 3000),
+('Hotel City Star', 'Delhi', 2500),
+('The Park Hotel', 'Delhi', 6000),
+
+-- Manali
+('Snow Valley Resort', 'Manali', 5000),
+('Mountain Inn', 'Manali', 2800),
+('Hill View Stay', 'Manali', 2000),
+('Apple Resort', 'Manali', 4500);</sql><sql name="SQL 3*">INSERT INTO activities (name, destination, cost) VALUES
+-- Kerala
+('Houseboat Ride', 'Kerala', 3000),
+('Kathakali Show', 'Kerala', 500),
+('Beach Visit', 'Kerala', 0),
+('Ayurvedic Spa', 'Kerala', 2000),
+
+-- Delhi
+('Food Tour', 'Delhi', 1500),
+('Red Fort Visit', 'Delhi', 500),
+('India Gate Visit', 'Delhi', 0),
+('Museum Tour', 'Delhi', 300),
+
+-- Manali
+('Paragliding', 'Manali', 2500),
+('River Rafting', 'Manali', 1800),
+('Solang Valley Visit', 'Manali', 0),
+('Trekking', 'Manali', 1200);</sql><current_tab id="1"/></tab_sql></sqlb_project>

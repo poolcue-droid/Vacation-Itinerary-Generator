@@ -46,7 +46,6 @@ public class TravelGUI extends JFrame {
         destField = addField(formPanel, "Destination");
         budgetField = addField(formPanel, "Total Budget (₹)");
         daysField = addField(formPanel, "Number of Days");
-        travelersField = addField(formPanel, "Number of Travelers");
 
         JButton generateBtn = new JButton("Generate Itinerary");
         generateBtn.setBackground(NAVY);
@@ -116,7 +115,6 @@ public class TravelGUI extends JFrame {
             String destination = destField.getText();
             int budget = Integer.parseInt(budgetField.getText());
             int days = Integer.parseInt(daysField.getText());
-            int travelers = Integer.parseInt(travelersField.getText());
 
             int perDayBudget = budget / days;
             int hotelBudget = perDayBudget / 2;
@@ -129,7 +127,6 @@ public class TravelGUI extends JFrame {
 
             sb.append("Client Name: ").append(name).append("\n");
             sb.append("Destination: ").append(destination).append("\n");
-            sb.append("Travelers: ").append(travelers).append("\n");
             sb.append("Total Budget: ₹").append(budget).append("\n\n");
 
             sb.append("Recommended Hotels:\n");
